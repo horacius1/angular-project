@@ -1,0 +1,32 @@
+
+.wrapper{
+  margin-left: 300px; 
+  margin-top: 200px; 
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 350px;height:300px;
+
+ span{
+     color:red;
+ }
+    .form-group{
+        display: flex;
+        justify-content: space-between;
+        
+       
+        label{
+            width: 150px;
+            text-align: right;
+            font-size: 20px;
+            
+        }
+        .ckeckbox{
+            margin-left: 20px;
+        }
+    }
+}
+

@@ -1,0 +1,59 @@
+<div class="wrapper" >
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit(f)" #f="ngForm" >
+    <div class="form-group">
+        <label for="e-mail">E-mail:</label>
+        <input type="text" id="e-mail" class="form-control" formControlName="Email">
+    </div>
+        <span *ngIf="!signupForm.get('Email').valid && signupForm.get('Email').touched">please enter valid email</span>
+    <div class="form-group">
+        <label for="password">password:</label>
+        <input type="password" id="password" class="form-control" formControlName="password">
+
+    </div>
+        <span *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">please enter valid password</span>
+    <div class="form-group">
+        <label for="confirmPassword">confirm password:</label>
+        <input type="confirmPassword" id="confirmPassword" class="form-control" formControlName="confirmPassword">
+
+    </div>
+        <span *ngIf="!signupForm.get('confirmPassword').valid && signupForm.get('confirmPassword').touched">please enter valid password</span>
+    <div class="form-group">
+        <label for="nickname">nickname:</label>
+        <input type="text" id="nickname" class="form-control" formControlName="nickname">
+
+    </div>
+        <span *ngIf="!signupForm.get('nickname').valid && signupForm.get('nickname').touched">please enter valid nickname</span>
+    <div class="form-group">
+        <label for="phone">phone number:</label>
+        <input type="text" id="phone" class="form-control"formControlName="phone">
+    </div>
+    <span *ngIf="!signupForm.get('phone').valid && signupForm.get('phone').touched">please enter valid phone</span>
+    <div class="form-group">
+        <label for="website">website</label>
+        <input type="text" id="website" class="form-control" formControlName="website">
+<span *ngIf="!signupForm.get('website').valid && signupForm.get('website').touched">please enter valid website</span>
+    </div>
+
+    <div class="ckeckbox">
+        <input type="checkbox" id="ckeckbox" formControlName="checkbox">
+        <label for="">i have read the <span class="agreement">agreement</span></label>
+
+
+    </div>
+    <span *ngIf="!this.signupForm.get('checkbox').value">please agree on agreement</span>
+    <div>
+    <button type="submit"
+    [disabled]=disabled()
+
+    >register</button>
+    </div>
+
+
+</form>
+
+
+
+
+
+
+</div>

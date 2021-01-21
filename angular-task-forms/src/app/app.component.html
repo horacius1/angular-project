@@ -1,0 +1,7 @@
+
+<button (click)="onSelect('user')">User list</button>
+<button (click)="onSelect('form')">form</button>
+
+<app-list-of-users  *ngIf="featureSelect==='user'" [users]="forms"></app-list-of-users>
+<app-from *ngIf="featureSelect==='form'" (useradd) = "userresiver($event)"  ></app-from>
+
